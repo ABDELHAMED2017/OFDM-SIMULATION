@@ -7,7 +7,7 @@
 
 % input/output file names
 function  ofdm_parameters
-file_in = 'qq.bmp';
+file_in = 'image.bmp';
 while isempty(file_in)
     file_in = input('source data filename: ', 's');
     if exist([pwd '/' file_in],'file')~=2
