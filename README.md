@@ -2,10 +2,6 @@
 
 - **OFDM_SIM.m** , it first read OFDM parameter and then transfer image via the wireless communication system.
 
-## USAGE
-
-We transfer the image file "image.bmp" into binary flow.
-
 ## ABOUT
 
 The project is created for OFDM simulation. 
