@@ -1,6 +1,14 @@
 ## FILES
 
-- **OFDM_SIM.m** , it first read OFDM parameter and then transfer image via the wireless communication system.
+- **OFDM_SIM.m** --  The main function.
+- **ofdm_parameters.m** -- Configure some simulation parameters which includes some key ones as below
+  - `ifft_size`, IFFT/FFT size
+  - `carrier_count`, sub carrier numbers
+  - `symb_size`,  modulation constellation mapping bit size, it relats to modulation scheme such as **BPSK, QPSK, 16QPSK and 256PSK**
+  - `clipping`, OFDM amplitude clipping factor
+  - `SNR_dB`, SNR with dB as unit
+  - `guard_time`, guard time for between symbols
+  - `spacing`, data subcarrier spacing
 
 ## ABOUT
 
@@ -10,7 +18,7 @@ We transfer an image via the wireless system and test the performance of image t
 
 ## HISTORY
 
-|      DATE      |   MODIFICATION    |
-| :------------: | :---------------: |
-| *Dec 25, 2016* | Creat the project |
-|                |                   |
+|      DATE      |          MODIFICATION           |
+| :------------: | :-----------------------------: |
+| *Dec 25, 2016* |        Creat the project        |
+| *Dec 27, 2016* | described every single function |
