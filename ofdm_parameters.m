@@ -53,7 +53,7 @@ end
 
 % signal to noise ratio in dB
 SNR_dB = 10;
-while isempty(SNR_dB)
+while isempty(SNR_dB)aa
     SNR_dB = input('Signal-to-Noise Ratio (SNR) in dB: ');
 end
 

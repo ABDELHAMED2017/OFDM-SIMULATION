@@ -277,8 +277,8 @@ fprintf('Percent error of pixels of the received image = %f%%\n\n', ...
 fprintf('##########################################\n')
 fprintf('#******** END of OFDM Simulation ********#\n')
 fprintf('##########################################\n\n')
-[img_rece,map] = imread('qq_OFDM.bmp');
-[img_sent,map0] = imread('qq.bmp');
+[img_rece,map] = imread('image_OFDM.bmp');
+[img_sent,map0] = imread('image.bmp');
 figure(8)
 subplot(121)
 imshow(img_sent,map0)
