@@ -38,7 +38,7 @@ end
 % convert data to complex numbers: 
 % Amplitudes: 1; Phaes: converted from data using constellation mapping 
 [X,Y] = pol2cart(data_tx_matrix*(2*pi/(2^symb_size)), ones(size(data_tx_matrix))); 
-complex_matrix = X + i*Y; 
+complex_matrix = X + 1i*Y; 
   
 % ------------------------------------------------------------ % 
 % ##### assign IFFT bins to carriers and imaged carriers ##### % 
@@ -107,7 +107,7 @@ end
 % ##### add a periodic guard time ##### % 
 % ------------------------------------- % 
 end_symb = size(signal_tx, 2);  % end of a symbol period without guard 
-signal_tx = [signal_tx(:,(end_symb-guard_time+1):end_symb) signal_tx]; 
+signal_tx = [signal_tx(:,(end_symb-guard_time+1):end_symb) signal_tx]; % add cyclic prefix
   
 % parellel to serial 
 signal_tx = signal_tx';     % MATLAB's reshape goes along with columns 

@@ -86,4 +86,4 @@ first_carrier = midFreq - round((carrier_count-1)*spacing/2);
 last_carrier = midFreq + floor((carrier_count-1)*spacing/2);
 carriers = (first_carrier:spacing:last_carrier) + 1;
 conj_carriers = ifft_size - carriers + 2;
-save parameters
+save('ofdm_parameters.mat');

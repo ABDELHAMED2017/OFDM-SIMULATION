@@ -7,7 +7,7 @@
   
 function [decoded_symb, decoded_phase] = ofdm_demod... 
     (symb_rx, ifft_size, carriers, conj_carriers, ... 
-    guard_time, symb_size, word_size, last, unpad, fig) 
+    guard_time, symb_size, ~, last, unpad, fig) 
   
 symb_period = ifft_size + guard_time; 
   
