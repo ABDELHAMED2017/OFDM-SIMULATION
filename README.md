@@ -20,17 +20,7 @@
 
 The image transmission quality is highly related to clipping/SNR/modulation scheme, so I simulate the system with different values of the above parameters. Here is some part of simulation result.
 
-![0dB](http://ohgefr15s.bkt.clouddn.com/0.bmp)
-
-![5dB](http://ohgefr15s.bkt.clouddn.com/5.bmp)
-
-![10dB](http://ohgefr15s.bkt.clouddn.com/10.bmp)
-
 ![15dB](http://ohgefr15s.bkt.clouddn.com/15.bmp)
-
-![clipping = 5dB](http://ohgefr15s.bkt.clouddn.com/5clip.bmp)
-
-
 
 ## ABOUT
 
