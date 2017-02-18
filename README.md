@@ -19,7 +19,6 @@
 ## SIMULATION RESULT
 
 The image transmission quality is highly related to clipping/SNR/modulation scheme, so I simulate the system with different values of the above parameters. Here is some part of simulation result.
-
 ![15dB](http://ohgefr15s.bkt.clouddn.com/15.bmp)
 
 ## ABOUT
