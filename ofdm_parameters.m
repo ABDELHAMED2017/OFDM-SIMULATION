@@ -6,8 +6,8 @@
 % This file configures parameters for the OFDM system.
 
 % input/output file names
-function  ofdm_parameters
-file_in = 'image.bmp';
+function  ofdm_parameters(symb_size, clipping, SNR_dB)
+file_in = 'image.png';
 while isempty(file_in)
     file_in = input('source data filename: ', 's');
     if exist([pwd '/' file_in],'file')~=2
@@ -15,7 +15,7 @@ while isempty(file_in)
         file_in = [];
     end
 end
-file_out = [file_in(1:length(file_in)-4) '_OFDM.bmp'];
+file_out = [file_in(1:length(file_in)-4) '_OFDM.png'];
 disp(['Output file will be: ' file_out])
 
 % size of Inverse Fast Fourier Transform (must be power of 2)
@@ -37,7 +37,6 @@ while (isempty(carrier_count) || (carrier_count>(ifft_size/2-2)) || carrier_coun
 end
 
 % bits per symbol (1 = BPSK, 2=QPSK, 4=16PSK, 8=256PSK)
-symb_size = 4;              % force into the while loop below
 while (isempty(symb_size) || (symb_size~=1 && symb_size~=2 && symb_size~=4 && symb_size~=8))
     symb_size = input('Modulation(1=BPSK, 2=QPSK, 4=16PSK, 8=256PSK): ');
     if (isempty(symb_size) || (symb_size~=1&&symb_size~=2&&symb_size~=4&&symb_size~=8))
@@ -46,14 +45,13 @@ while (isempty(symb_size) || (symb_size~=1 && symb_size~=2 && symb_size~=4 && sy
 end
 
 % channel clipping in dB
-clipping = 2;
 while isempty(clipping)
     clipping = input('Amplitude clipping introduced by communication channel (in dB):');
 end
 
 % signal to noise ratio in dB
-SNR_dB = 10;
-while isempty(SNR_dB)aa
+
+while isempty(SNR_dB)
     SNR_dB = input('Signal-to-Noise Ratio (SNR) in dB: ');
 end
 
